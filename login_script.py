@@ -98,7 +98,7 @@ async def main():
         delay = random.randint(1000, 8000)
         await delay_time(delay)
         
-    message += f"🔚脚本结束，如有异常点击下方按钮👇"
+    message += f"🔚脚本结束，如有异常请登录GitHub进行检查"
     
     sc_send(sendkey=FT_KEY,title_ft="Serv00 Status via python",desp_ft=message)
     print(f'所有{serviceName}账号登录完成！')
@@ -119,7 +119,6 @@ def sc_send(sendkey, title_ft="", desp_ft="", options=None):
     try:
         response_ft = requests.post(url_ft, json=params_ft, headers=headers_ft)
         result_ft = response_ft.json()
-        print(result_ft)
     except Exception as e:
         print(f"发送消息到方糖时出错: {e}")
     return result_ft
