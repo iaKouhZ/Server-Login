@@ -107,7 +107,7 @@ async def main():
 def sc_send(sendkey, title_ft="", desp_ft="", options=None):
     if options is None:
         options = {}
-    url_ft = "https://sctapi.ftqq.com/"+sendkey+".send"
+    url_ft = "https://xizhi.qqoq.net/"+sendkey+".send"
     params_ft = {
         'title': title_ft,
         'desp': desp_ft,
@@ -120,7 +120,7 @@ def sc_send(sendkey, title_ft="", desp_ft="", options=None):
         response_ft = requests.post(url_ft, json=params_ft, headers=headers_ft)
         result_ft = response_ft.json()
     except Exception as e:
-        print(f"发送消息到方糖时出错: {e}")
+        print(f"发送消息到息知时出错: {e}")
     return result_ft
 
 if __name__ == '__main__':
