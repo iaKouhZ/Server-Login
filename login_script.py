@@ -110,7 +110,7 @@ def sc_send(sendkey, title_ft="", desp_ft="", options=None):
     url_ft = "https://xizhi.qqoq.net/"+sendkey+".send"
     params_ft = {
         'title': title_ft,
-        'desp': desp_ft,
+        'content': desp_ft,
         **options
     }
     headers_ft = {
